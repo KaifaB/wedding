@@ -195,6 +195,7 @@ body {
   display:flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   width: 100%;
   background: #ffe9cd;
@@ -280,7 +281,8 @@ body {
   align-items: center;
   background: url('./img/hero.jpg');
   border-radius: 15px;
-  width: 70vw;
+  width: 80vw;
+  min-width: 280px;
   max-width: 700px;
   height: 90%;
 }
@@ -292,6 +294,7 @@ body {
   border-radius: 20px;
   height: 80%;
   width: 70%;
+  min-width: 230px;
 }
 .inner::before{
   content: 'RSVP';
