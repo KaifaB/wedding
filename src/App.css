@@ -1,38 +1,374 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #F4F1EE;
+  position: relative;
+  overflow-x:hidden;
+}
+.body{
+  width: 100%;
+  overflow-x:hidden;
+}
+.App{
+  height: auto;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top{
+  margin: 0 auto;
+  width: 900px;
+  margin-top: -400px;
+}
+.nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav ul::before{
+  position: absolute;
+  content: '';
+  top: -150px;
+  left: 0px;
+  width: 100vw;
+  height: 400px;
+  background-image:url('./img/wedding-invitation.png');
+  background-position: center;
+  z-index:-4;
+}
+.nav ul{
+  display: flex;
+  margin-top: 100px;
+}
+.nav ul li{
+  margin: 0 40px;
+  color: #626462;
+  list-style: none;
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
+  cursor:pointer;
+}
+.nav ul li:hover{
+  color: white;
+}
+.nav a{
+  text-decoration: none;
+}
+.active{
+  border-bottom: 2px solid #626462;
+  color: black !important;
+}
+.home{
+  font-size: 54px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.registry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registry div{
+  cursor:pointer;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registry div:hover{
+  color: white;
+}
+.registry img{
+  width: 200px;
+  height: 200px;
+}
+.registry a{
+  color: black;
+  text-decoration: none;
+}
+/* FOOTER*/
+
+.footer{
+  background:cornsilk;
+  display: flex;
+  align-items: center;
+  color: rgb(83, 83, 83);
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  height: 26px;
+}
+/*HOME PAGE*/
+.home{
+  background: url('./img/kev-ginny-1.png');
+  background-size: cover;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  align-self: center;
+  height: 1200px;
+  background-position:right;
+  background-repeat:no-repeat;
+  border:rgb(252, 250, 250) solid 4px;
+  box-shadow: -5px 5px 10px 0 rgb(107, 107, 107);
+}
+.home h1{
+  font-size: 52px;
+  color: white;
+}
+/*New HOME */
+.contain-hero{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.hero::before{
+  content: '';
+  position: absolute;
+  background-image: url('./img/flower-watercolor.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 600px;
+  height: 600px;
+  transform:rotate(-90deg);
+  top: -200px;
+  left: -240px;
+}
+.hero{
+  position: relative;
+  background: url('./img/hero.jpg');
+  width: 80vw;
+  height: 130vh;
+  border-radius: 50%;
+  color: #511910;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero h1{
+  font-family: 'Praise', cursive;
+  font-size: 60px;
+}
+.hero p{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+}
+.hero::after{
+  content: '';
+  position: absolute;
+  background-image: url('./img/flower-watercolor.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 600px;
+  height: 600px;
+  transform:rotate(90deg);
+  bottom: -240px;
+  right: -240px;
+}
+.overlay{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background: rgba(255,255,255, 0.3);
+  width: 80vw;
+  height: 130vh;
+  border-radius: 50%;
 }
-
-.App-link {
-  color: #61dafb;
+.break{
+  width: 400px;
+  height: 150px;
+  opacity: 0.7;
 }
+.countdown{
+  height: 100vh;
+  overflow: hidden;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #ffe9cd;
+}
+.countdown::after{
+  content:'';
+  position: absolute;
+  width: 80px;
+  height: 1600px;
+  background: url('./img/picture-frame-flowers.png');
+  background-size: contain;
+  transform: rotate(90deg);
+  top: -100px;
+}
+.countdown h1{
+  padding: 16px 0;
+  color: #511910;
+  font-family: 'Amatic SC', cursive;
+  font-size: 52px;
+}
+.countdown img{
+  width: 200px;
+  height: 80px;
+  transform: rotate(180deg);
+}
+.countdown p{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+.clock{
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+}
+.clock label{
+  font-family: 'Courgette', cursive;
+  margin: 6px 0;
+  color: #511910;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #704043;
+  margin: 0 16px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #511910;
+}
+.date-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 15px;
+  color: #FFE9CD;
+  background: #551910;
+  width: 220px;
+  height: 50px;
+}
+.column-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* INFORMATION */
+.info{
+  height: 100vh;
+  background: #ffcecf;
+}
+/* RSVP */
+.new-rsvp{
+  height: 100vh;
+  background: #F4F1EE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./img/hero.jpg');
+  border-radius: 15px;
+  width: 70vw;
+  height: 90%;
+}
+.held{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(244, 241, 238, 0.7);
+  border-radius: 20px;
+  height: 80%;
+  width: 70%;
+}
+.inner::before{
+  content: 'RSVP';
+  font-family: 'Fira Sans', sans-serif;
+  position: absolute;
+  font-size: 24px;
+  top: -14px;
+  left: 50px;
+  padding: 0 10px;
+  background:#F4D7D6;
+}
+.inner{
+  position: relative;
+  padding: 20px 10px;
+  height: 85%;
+  width: 80%;
+  border-radius: 15px;
+  border: 2px solid black;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.name{
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+}
+.name label, .guests label{
+  font-family: 'Cormorant Garamond', serif;
+}
+.name input, .name select{
+  height: 24px;
+  font-family: 'Kalam', cursive;
+  border: none;
+}
+.name input{
+  padding: 0 4px;
+}
+.name input:focus, .name select:focus{
+  height: 24px;
+  outline: none;
+}
+.guest-numbers{
+  display: flex;
+  justify-content: space-evenly;
+}
+.radio-whole{
+  display:flex;
+  align-items: center;
+  height: 20px;
+}
+.guest-numbers input[type=radio]{
+  margin-left: 2px;
+  height: 16px;
+  width: 16px;
+}
+.guest{
+  animation: fadein 0.4s ease-in-out;
+}
+#submit{
+  position: absolute;
+  font-family: 'Fira Sans', sans-serif;
+  width: 60px;
+  bottom: -10px;
+  right: 20px;
+  border:none;
+  background: #F5DBD2;
+  text-decoration: underline;
+  cursor:pointer;
+}
+#submit:hover{
+  color:white;
+  text-decoration: none;
+}
+/* ANIMATIONS */
+@keyframes fadein {
+  0%{
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    opacity: 1;
   }
 }
