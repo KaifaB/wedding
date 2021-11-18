@@ -19,10 +19,6 @@ class App extends Component {
       <div>
         <Router>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/info" element={<Info />} />
-              <Route path="/registry" element={<Registry />} />
-              <Route path="/rsvp" element={<RSVP />} />
               <Route path="/new" element={<Whole />} />
             </Routes>
           <Footer />
